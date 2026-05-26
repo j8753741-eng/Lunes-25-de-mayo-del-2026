@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUNES 25 DE MAYO DEL 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    overflow-x:hidden;
+    background:
+    radial-gradient(circle at top, rgba(170,90,255,0.35), transparent 35%),
+    radial-gradient(circle at bottom, rgba(110,40,180,0.45), transparent 40%),
+    linear-gradient(145deg,#090012,#120020,#1a0033,#090012);
+    font-family:'Poppins',sans-serif;
+    position:relative;
+}
+
+/* ESTRELLAS */
+body::before{
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(rgba(255,255,255,0.7) 1px, transparent 1px);
+    background-size:120px 120px, 180px 180px;
+    background-position:0 0, 60px 60px;
+    opacity:0.15;
+    animation:starsMove 90s linear infinite;
+}
+
+@keyframes starsMove{
+    from{transform:translateY(0);}
+    to{transform:translateY(-200px);}
+}
+
+/* AURAS */
+.aura{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(80px);
+    opacity:0.25;
+}
+
+.aura1{
+    width:300px;
+    height:300px;
+    background:#b86bff;
+    top:10%;
+    left:5%;
+}
+
+.aura2{
+    width:350px;
+    height:350px;
+    background:#7d2cff;
+    bottom:10%;
+    right:5%;
+}
+
+/* CARTA */
+.card{
+    position:relative;
+    width:100%;
+    max-width:950px;
+    padding:70px;
+    border-radius:35px;
+    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:
+    0 0 40px rgba(150,70,255,0.25),
+    inset 0 0 25px rgba(255,255,255,0.04);
+    overflow:hidden;
+}
+
+/* BRILLOS DECORATIVOS */
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,rgba(255,255,255,0.08),transparent,rgba(255,255,255,0.03));
+    pointer-events:none;
+}
+
+.corner{
+    position:absolute;
+    width:120px;
+    height:120px;
+    border:2px solid rgba(215,170,255,0.25);
+}
+
+.top-left{
+    top:20px;
+    left:20px;
+    border-right:none;
+    border-bottom:none;
+    border-radius:25px 0 0 0;
+}
+
+.bottom-right{
+    bottom:20px;
+    right:20px;
+    border-left:none;
+    border-top:none;
+    border-radius:0 0 25px 0;
+}
+
+/* TITULO */
+.date{
+    text-align:center;
+    color:#e4c7ff;
+    font-size:15px;
+    letter-spacing:4px;
+    margin-bottom:25px;
+    text-transform:uppercase;
+}
+
+/* SALUDO */
+.title{
+    text-align:center;
+    font-family:'Great Vibes',cursive;
+    font-size:68px;
+    color:#f6dcff;
+    margin-bottom:45px;
+    text-shadow:
+    0 0 10px rgba(255,255,255,0.6),
+    0 0 25px rgba(198,120,255,0.8),
+    0 0 40px rgba(161,70,255,0.8);
+}
+
+/* TEXTO */
+.text{
+    font-family:'Cormorant Garamond',serif;
+    color:#f8ecff;
+    font-size:31px;
+    line-height:2;
+    text-align:justify;
+    position:relative;
+    z-index:2;
+}
+
+.text p{
+    margin-bottom:30px;
+}
+
+.text strong{
+    color:#ffffff;
+    font-weight:700;
+    text-shadow:0 0 10px rgba(255,255,255,0.5);
+}
+
+/* FIRMA */
+.signature{
+    margin-top:55px;
+    text-align:right;
+    color:#f3d6ff;
+    font-size:22px;
+    line-height:1.9;
+    letter-spacing:1px;
+}
+
+.signature strong{
+    font-size:28px;
+    color:#ffffff;
+}
+
+/* FRASE NEON */
+.neon{
+    margin-top:70px;
+    text-align:center;
+    font-family:'Great Vibes',cursive;
+    font-size:42px;
+    line-height:1.7;
+    color:#d78cff;
+    animation:glow 3s ease-in-out infinite alternate;
+    text-shadow:
+    0 0 6px #d78cff,
+    0 0 12px #c76fff,
+    0 0 22px #b84dff,
+    0 0 45px #9f24ff,
+    0 0 80px #8617e8;
+}
+
+@keyframes glow{
+    from{
+        opacity:0.8;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+/* FLORES */
+.flower{
+    position:absolute;
+    font-size:26px;
+    opacity:0.18;
+    animation:float 8s ease-in-out infinite;
+}
+
+.f1{top:8%;right:10%;}
+.f2{bottom:12%;left:8%;}
+.f3{top:50%;left:4%;}
+.f4{bottom:35%;right:5%;}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0px) rotate(0deg);
+    }
+    50%{
+        transform:translateY(-12px) rotate(5deg);
+    }
+}
+
+@media(max-width:768px){
+
+.card{
+    padding:45px 28px;
+}
+
+.title{
+    font-size:52px;
+}
+
+.text{
+    font-size:24px;
+    line-height:1.8;
+}
+
+.neon{
+    font-size:32px;
+}
+
+.signature{
+    font-size:19px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="aura aura1"></div>
+<div class="aura aura2"></div>
+
+<div class="card">
+
+<div class="corner top-left"></div>
+<div class="corner bottom-right"></div>
+
+<div class="flower f1">✦</div>
+<div class="flower f2">❀</div>
+<div class="flower f3">✧</div>
+<div class="flower f4">❁</div>
+
+<div class="date">
+Lunes, 25 de mayo de 2026 — Noche
+</div>
+
+<div class="title">
+Mi vida
+</div>
+
+<div class="text">
+
+<p>
+Esta noche quiero hablarte desde la parte más intensa de mi corazón… esa parte donde existes tú desde hace mucho más de lo que las palabras pueden explicar. Hay noches en las que el mundo entero parece quedarse quieto, y justo ahí, en medio del silencio, apareces tú dentro de mí como una llama imposible de apagar.
+</p>
+
+<p>
+No sé qué hiciste conmigo, amor, pero lograste convertirte en ese pensamiento que llega sin avisar y se queda abrazándome el alma durante horas. A veces me basta recordar tu mirada para sentir un nudo dulce en el pecho, como si mi corazón reaccionara a ti incluso cuando no estás cerca. Y honestamente… me encanta sentirme así por ti.
+</p>
+
+<p>
+Hay algo profundamente adictivo en tu existencia. Tu manera de sonreír, tu voz cuando estás cansadita, tus pequeños gestos, incluso esos momentos en los que te quedas callada y aun así logras decirme todo con solo mirarme. Tú tienes una forma única de hacerme sentir amado, deseado y completamente perdido por ti al mismo tiempo.
+</p>
+
+<p>
+Esta noche quisiera tenerte aquí conmigo. Besarte lento, acariciar tu cabello mientras te miro como si fueras el milagro más hermoso que me regaló la vida. Porque sí, amor… a veces te veo y me cuesta creer que una persona tan increíble exista de verdad. Eres demasiado especial para este mundo y aun así elegiste quedarte conmigo, y eso es algo que nunca voy a dejar de agradecer.
+</p>
+
+<p>
+Quiero que recuerdes algo antes de dormir: no existe una sola noche en la que no termine pensando en ti. No existe un solo día en el que mi corazón no te busque de alguna manera. Te has convertido en mi lugar favorito incluso estando lejos, en la calma que necesito cuando todo pesa, y también en el deseo más fuerte que vive dentro de mí.
+</p>
+
+<p>
+Y si esta noche pudiera pedir algo, pediría quedarme abrazado a ti mientras el tiempo deja de importar. Escuchar tu respiración cerquita, sentir tus manos junto a las mías y repetirte bajito cuánto te amo hasta que te quedes dormida sobre mi pecho.
+</p>
+
+<p>
+Porque tú, mi amor… eres esa clase de sentimiento que no se supera, no se reemplaza y jamás se olvida.
+</p>
+
+<p>
+<strong>Buenas noches, mi niña hermosa.</strong><br>
+<strong>Te amo con una intensidad que cada día se vuelve más inmensa.</strong>
+</p>
+
+</div>
+
+<div class="signature">
+<strong>TU NOVIO:</strong><br>
+JUAN KALETH MENDOZA PRIMERA 💜
+</div>
+
+<div class="neon">
+Entre galaxias dormidas y madrugadas cubiertas de silencio, existe un destino que siempre termina guiando mi alma hacia la misma luz infinita… la que vive escondida en los ojos de mi eterno universo llamado VALERIA PETRO VILLAZÓN.
+</div>
+
+</div>
+
+</body>
+  </html>
